@@ -18,4 +18,23 @@ npm run build
 npm run build --report
 ```
 
+# add /src/services/config.js to configure axios urls like
+import axios from 'axios'
+
+export let server = () => {
+  return axios.create({
+    // для сервера
+    // baseURL: ''
+    // для локалки
+    baseURL: ''
+  })
+}
+
+export let geocode = () => {
+  return axios.create({
+    baseURL: 'https://geocode-maps.yandex.ru/1.x'
+  })
+}
+
+
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
